@@ -19,6 +19,7 @@ const details = () => {
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ title: 'Poll voting' }} />
+
       <Text style={styles.question}>{poll.question}</Text>
 
       <View style={{ gap: 5 }}>

@@ -28,6 +28,12 @@ export default function HomeScreen() {
             <Link href='/polls/new'>
               <AntDesign name='plus' size={20} color='gray' />
             </Link>
+          ),
+          headerLeft: () => (
+            // <Link href='/login'>
+            <Link href='/profile'>
+              <AntDesign name='user' size={20} color='gray' />
+            </Link>
           )
         }}
       />

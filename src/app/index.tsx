@@ -31,7 +31,6 @@ export default function HomeScreen() {
             </Link>
           ),
           headerLeft: () => (
-            // <Link href='/login'>
             <Link href='/profile'>
               <AntDesign name='user' size={20} color='gray' />
             </Link>

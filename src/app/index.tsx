@@ -3,9 +3,10 @@ import { StyleSheet, Text, View, FlatList, Alert } from 'react-native';
 import { Link, Stack } from 'expo-router';
 import { AntDesign } from '@expo/vector-icons';
 import { supabase } from '../lib/supabase';
+import { Tables } from '../types/supabase';
 
 export default function HomeScreen() {
-  const [polls, setPolls] = useState([]);
+  const [polls, setPolls] = useState<Tables<'polls'>[]>([]);
 
   useEffect(() => {
     const fetchPolls = async () => {

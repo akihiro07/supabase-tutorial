@@ -31,6 +31,10 @@ const details = () => {
     }
 
     const fetchUserVote = async () => {
+      if (!user) {
+        return;
+      }
+
       const { data, error } = await supabase
         .from('votes')
         .select('*')
@@ -56,7 +60,7 @@ const details = () => {
   }, []);
 
   const vote = async () => {
-    const newVote = { option: selected, poll_id: poll.id, user_id: user.id }
+    const newVote = { option: selected, poll_id: poll.id, user_id: user?.id }
     if (userVote) {
       newVote.id = userVote.id
     }
